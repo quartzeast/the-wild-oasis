@@ -62,7 +62,7 @@ function CabinRow({ cabin }) {
   }
 
   return (
-    <Table.Row role='row'>
+    <Table.Row role="row">
       <Img src={image} />
       <Cabin>{name}</Cabin>
       <div>Fits up to {maxCapacity}</div>
@@ -78,26 +78,30 @@ function CabinRow({ cabin }) {
             <Menus.Toggle id={cabinId} />
 
             <Menus.List id={cabinId}>
-              <Menus.Button icon={<HiSquare2Stack />} onClick={handleDuplicate}>
+              <Menus.Button
+                icon={<HiSquare2Stack />}
+                onClick={handleDuplicate}
+                disabled={isCreating}
+              >
                 Duplicate
               </Menus.Button>
 
-              <Modal.Open opens='edit'>
+              <Modal.Open opens="edit">
                 <Menus.Button icon={<HiTrash />}>Edit</Menus.Button>
               </Modal.Open>
 
-              <Modal.Open opens='delete'>
+              <Modal.Open opens="delete">
                 <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
               </Modal.Open>
             </Menus.List>
 
-            <Modal.Window name='edit'>
+            <Modal.Window name="edit">
               <CreateCabinForm cabinToEdit={cabin} />
             </Modal.Window>
 
-            <Modal.Window name='delete'>
+            <Modal.Window name="delete">
               <ConfirmDelete
-                resourceName='cabins'
+                resourceName="cabins"
                 disabled={isDeleting}
                 onConfirm={() => deleteCabin(cabinId)}
               />
