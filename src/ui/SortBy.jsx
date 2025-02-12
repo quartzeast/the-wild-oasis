@@ -13,7 +13,7 @@ function SortBy({ options }) {
   return (
     <Select
       options={options}
-      type='white'
+      $type='white'
       value={sortBy}
       onChange={handleChange}
     />

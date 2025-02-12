@@ -36,8 +36,8 @@ const StyledList = styled.ul`
   box-shadow: var(--shadow-md);
   border-radius: var(--border-radius-md);
 
-  right: ${(props) => props.position.x}px;
-  top: ${(props) => props.position.y}px;
+  right: ${(props) => props.$position.x}px;
+  top: ${(props) => props.$position.y}px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 `;
 
@@ -112,7 +112,7 @@ function List({ id, children }) {
   if (openId !== id) return null;
 
   return createPortal(
-    <StyledList position={position} ref={ref}>
+    <StyledList $position={position} ref={ref}>
       {children}
     </StyledList>,
     document.body
