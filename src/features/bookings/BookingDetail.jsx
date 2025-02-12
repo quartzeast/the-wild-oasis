@@ -12,6 +12,7 @@ import { HiArrowUpOnSquare } from 'react-icons/hi2';
 import { useNavigate } from 'react-router';
 import { useMoveBack } from '../../hooks/useMoveBack';
 import ConfirmDelete from '../../ui/ConfirmDelete';
+import Empty from '../../ui/Empty';
 import Modal from '../../ui/Modal';
 import Spinner from '../../ui/Spinner';
 import { useCheckout } from '../check-in-out/useCheckout';
@@ -33,6 +34,7 @@ function BookingDetail() {
   const navigate = useNavigate();
 
   if (isLoading) return <Spinner />;
+  if (!booking) return <Empty resourceName="booking" />;
 
   const { status, id: bookingId } = booking;
 
@@ -44,9 +46,9 @@ function BookingDetail() {
 
   return (
     <>
-      <Row type='horizontal'>
+      <Row type="horizontal">
         <HeadingGroup>
-          <Heading as='h1'>Booking #{bookingId}</Heading>
+          <Heading as="h1">Booking #{bookingId}</Heading>
           <Tag $type={statusToTagName[status]}>{status.replace('-', ' ')}</Tag>
         </HeadingGroup>
         <ButtonText onClick={moveBack}>&larr; Back</ButtonText>
@@ -72,13 +74,13 @@ function BookingDetail() {
         )}
 
         <Modal>
-          <Modal.Open opens='delete'>
-            <Button variation='danger'>Delete booking</Button>
+          <Modal.Open opens="delete">
+            <Button variation="danger">Delete booking</Button>
           </Modal.Open>
 
-          <Modal.Window name='delete'>
+          <Modal.Window name="delete">
             <ConfirmDelete
-              resourceName='booking'
+              resourceName="booking"
               disabled={isDeleting}
               onConfirm={() =>
                 deleteBooking(bookingId, {
@@ -89,7 +91,7 @@ function BookingDetail() {
           </Modal.Window>
         </Modal>
 
-        <Button variation='secondary' onClick={moveBack}>
+        <Button variation="secondary" onClick={moveBack}>
           Back
         </Button>
       </ButtonGroup>

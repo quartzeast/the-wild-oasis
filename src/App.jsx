@@ -1,9 +1,9 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
-
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 import { DarkModeProvider } from './context/DarkModeContext';
+
 import Account from './pages/Account';
 import Booking from './pages/BookingDetail';
 import Bookings from './pages/Bookings';
