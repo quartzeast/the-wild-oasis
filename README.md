@@ -94,13 +94,11 @@ To run this project locally:
    ```bash
    npm install
    ```
-3. Set up environment variables:
-   - Configure Supabase and add the necessary environment variables in a `.env` file. Check out the `.env.example` for reference.
-4. Run the development server:
+3. Run the development server:
    ```bash
    npm run dev
    ```
-5. Open [http://localhost:3000](http://localhost:3000) to see the app.
+4. Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ## Acknowledgments
 
