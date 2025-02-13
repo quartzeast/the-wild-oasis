@@ -12,23 +12,9 @@
 
   <div align="center">
     <a href="https://the-wild-oasis-quartzeast.vercel.app">View website</a>
-    •
-    <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis/issues">Report Bug</a>
-    •
-    <a href="https://github.com/CodeWithAlamin/The-Wild-Oasis/pulls">Request Feature</a>
   </div>
 
   <hr>
-
-</div>
-
-<!-- Badges -->
-<div align="center">
-
-![Status](https://img.shields.io/badge/Status-Completed-success?style=flat)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/CodeWithAlamin)
-[![Twitter Follow](https://img.shields.io/twitter/follow/CodeWithAlamin?style=for-the-badge&logo=x)](https://x.com/CodeWithAlamin)
 
 </div>
 
