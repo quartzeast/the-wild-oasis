@@ -10,10 +10,6 @@
     </a>
   </h3>
 
-  <div align="center">
-    <a href="https://the-wild-oasis-quartzeast.vercel.app">View website</a>
-  </div>
-
   <hr>
 
 </div>
